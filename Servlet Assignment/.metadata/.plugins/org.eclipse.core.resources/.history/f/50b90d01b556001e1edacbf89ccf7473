@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" %>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+
+<h1 style="text-align: center; color: blue;">Bloggin Page</h1>
+<div style="display: flex; justify-content: center; height: 200px;">
+<form action="./blog & s1=save %">
+<input type="submit" value="Write Blog">
+</form>
+<form action="./blog & s1=write %">
+<input type="submit" value=" Read Blog">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+package in.ineuron.service;
+
+import in.ineuron.dto.Blog;
+
+public interface IBlogService {
+
+	 public String saveBlog(Blog blog);
+	 
+	 public Blog getBlog(Integer bid);
+}

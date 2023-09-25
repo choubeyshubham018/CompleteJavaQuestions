@@ -1,0 +1,36 @@
+package in.ineuron.repo;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
+
+import in.ineuron.model.Student;
+import in.ineuron.util.HibernateUtil;
+
+@Repository
+public class StudentDaoImpl implements IStudentDao {
+
+	private Transaction transaction;
+
+	@Override
+	public String saveStudents(Student students) {
+		
+		return null;
+	}
+
+	@Override
+	public Student fetchStudentById(Integer id) {
+		Session session = HibernateUtil.getSession();
+		Student student = session.get(Student.class, id);
+		return student;
+	}
+
+	@Override
+	public List<Student> fetchAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,13 @@
+INDEX VERSION 1.132+C:\Users\schou\eclipse-workspace\Final Assignment\JavaCore Assignment\.metadata\.plugins\org.eclipse.jdt.core
+2690534575.index
+3744243474.index
+850055529.index
+4136426506.index
+1630314124.index
+2778919514.index
+1980423910.index
+1865797976.index
+4196644887.index
+3888075323.index
+595111279.index
+2016423.index

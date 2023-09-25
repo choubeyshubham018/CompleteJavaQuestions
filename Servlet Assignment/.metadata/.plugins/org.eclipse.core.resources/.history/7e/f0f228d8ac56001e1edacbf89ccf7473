@@ -1,0 +1,19 @@
+package in.ineuron.service;
+
+import in.ineuron.dto.Blog;
+
+public class BlogServiceImpl implements IBlogService {
+
+	@Override
+	public String saveBlog(Blog blog) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Blog getBlog(Integer bid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

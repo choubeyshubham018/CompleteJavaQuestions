@@ -1,0 +1,19 @@
+package in.ineuron;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import in.ineuron.service.IStudentService;
+@Configuration
+@ComponentScan(basePackages = "in/ineuron")
+public class App 
+{
+    public static void main( String[] args )
+    {
+       ApplicationContext context = new ClassPathXmlApplicationContext();
+       IStudentService service = context.getBean(IStudentService.class);
+       
+    }
+}

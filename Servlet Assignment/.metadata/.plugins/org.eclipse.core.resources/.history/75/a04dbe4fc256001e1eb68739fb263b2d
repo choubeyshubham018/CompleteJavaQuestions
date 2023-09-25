@@ -1,0 +1,43 @@
+package in.ineuron.util;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
+public class JdbcUtil {
+   
+	  
+	private static Connection connection;
+
+	private JdbcUtil() {
+		
+	}
+	
+	static {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@SuppressWarnings("resource")
+	public static Connection createConnection() {
+      
+		HikariConfig config = new HikariConfig("C:\\Users\\schou\\eclipse-workspace\\Final Assignment\\Servlet Assignment\\ServletBlogApplication\\src\\main\\java\\in\\ineuron\\properties\\application.properties");
+		HikariDataSource dataSource = new HikariDataSource(config);
+		try {
+			return dataSource.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	
+		return connection;
+	}
+}

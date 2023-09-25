@@ -1,0 +1,19 @@
+package in.ineuron.dao;
+
+import in.ineuron.dto.Blog;
+
+public class BlogDaoImpl implements IBlogDao {
+
+	@Override
+	public String saveBlog(Blog blog) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Blog getBlog(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

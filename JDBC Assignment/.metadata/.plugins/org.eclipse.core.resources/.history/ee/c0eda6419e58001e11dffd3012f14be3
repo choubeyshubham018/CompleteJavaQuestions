@@ -1,0 +1,8 @@
+package in.ineuron.service;
+
+import in.ineuron.model.Product;
+
+public interface IProductServce {
+
+	public Product getProduct(Integer pid);
+}

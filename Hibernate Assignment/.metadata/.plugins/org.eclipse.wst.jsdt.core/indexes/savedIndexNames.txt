@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Users\schou\eclipse-workspace\Final Assignment\Hibernate Assignment\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

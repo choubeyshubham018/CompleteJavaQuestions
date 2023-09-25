@@ -1,0 +1,30 @@
+package in.ineuron;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+
+import in.ineuron.config.AppConfig;
+import in.ineuron.service.IServicePlayer;
+
+public class App {
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+		IServicePlayer service = context.getBean(IServicePlayer.class);
+		System.out.println(service.fetchPlayer(2));
+		
+		System.out.println("************************************************************");
+		
+		System.out.println(service.updateRecord(2, "Virat Kohli", "BHARAT"));
+		
+		System.out.println("************************************************************");
+		
+		System.out.println(service.fetchPlayer(2));
+		
+		((ConfigurableApplicationContext) context).close();
+
+	}
+}

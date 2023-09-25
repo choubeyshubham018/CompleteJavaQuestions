@@ -1,0 +1,39 @@
+package in.ineuron.repo;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import in.ineuron.model.Players;
+import in.ineuron.util.HibernateUtil;
+
+public class PlayerRepoImpl implements IPlayerRepo {
+
+	private Session session;
+	private Transaction transaction;
+	private Players player;
+
+	@Override
+	public String updateRecord(Integer id,String name,String team) {
+		try {
+			session = HibernateUtil.getSession();
+			if(session!=null) {
+				transaction = session.beginTransaction();
+				if(transaction!=null) {
+				 player = session.get(Players.class, id);
+				 System.out.println("Record Before Update");
+				 
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+
+	@Override
+	public Players fetchPlayerById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,4 @@
+jdbc.Url=jdbc:mysql:///class
+datasource.user=root
+datasource.password=Password
+server.port=9999

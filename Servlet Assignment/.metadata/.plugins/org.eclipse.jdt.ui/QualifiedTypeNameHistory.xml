@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.zaxxer.hikari.HikariConfig"/>
+    <fullyQualifiedTypeName name="com.zaxxer.hikari.HikariDataSource"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="in.ineuron.util.JdbcUtil"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.BlogDaoImpl"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.IBlogDao"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.BlogServiceImpl"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.IBlogService"/>
+    <fullyQualifiedTypeName name="in.ineuron.servicefactory.BlogServiceFactory"/>
+    <fullyQualifiedTypeName name="in.ineuron.daofactory.BlogDaoFactory"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="in.ineuron.dto.Blog"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,23 @@
+*Interface
+1.Interface is a contract that specifies set of abstract methods which must be implemented 
+by the child Concrete Class.
+2.Interface can be Defined by using the keyword 'interface'.
+3.In java Interface is manly used for defining the System Requirement Specification.
+4.All the methods inside the Interface are by default public and abstract.
+5.All the Variable inside the Interface are also static and final by default
+6.A concrete class can be inherited from interface by using the keyword 'implements'.
+7.A class can implements multiple inheritance.
+8.Interface can't provide the implementation of abstract class.
+
+
+*Abstract Class
+1.Abstract class is a special type of class in java that cannot be instantiated and contains
+ both abstract and concrete methods.
+2.Abstract can be defined by using the keyword 'abstract'.
+3.Abstract class can also be used for System Requirement Specification.
+4.Inside the Interface we can define the methods by using following Access Modifier:-
+  public,default,protected and private.
+5. Inside the Interface we can define any type of variables such as static,instance,final etc.   
+6. Abstract class can be Inherited by using the keyword 'extends'.
+7. An concrete subclass can extends only one abstract class.
+8. An Abstract class can provide the implementation of one or many interface

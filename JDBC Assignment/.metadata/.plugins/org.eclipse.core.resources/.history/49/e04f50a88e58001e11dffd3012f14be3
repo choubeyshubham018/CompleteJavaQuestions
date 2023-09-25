@@ -1,0 +1,116 @@
+package in.ineuron;
+
+import java.util.Scanner;
+
+import in.ineuron.model.User;
+import in.ineuron.service.IUserService;
+import in.ineuron.servicefactory.UserServiceFactory;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+     crudOperation();
+    }
+    public static void crudOperation() {
+    	IUserService service=UserServiceFactory.getUserService();
+    	while(true) {
+     Scanner sc = new Scanner(System.in);
+     System.out.println("1.Add operation --> Press 1");
+     System.out.println("2.Select operation --> Press 2");
+     System.out.println("3.Update operation --> Press 3");
+     System.out.println("4.Delete operation --> Press 4");
+     System.out.println("5.exut             --> press 5");
+     System.out.print("Enter your Option below");
+     int select=sc.nextInt();
+     switch (select) {
+	case 1:
+		User user = new User();
+		System.out.println("Enter the User Id -->");
+		int id = sc.nextInt();
+		System.out.print("Enter the User Name -->");
+		String name = sc.next();
+		System.out.print("Enter the User Age -->");
+		int age = sc.nextInt();
+		System.out.print("Enter the User Address -->");
+		String addr = sc.next();
+		user.setId(id);
+		user.setName(name);
+		user.setAge(age);
+		user.setAddr(addr);
+		String  res = service.insertUser(user);
+	     System.out.println(res);
+	     System.out.println("Press 1 to go Back");
+	     System.out.println("Press another number to exit");
+	     int next = sc.nextInt();
+	     if(next==1) {
+	    	 crudOperation();
+	     }else {
+	    	 System.exit(1);
+	     }
+	     
+		break;
+		
+	case 2:
+		System.out.println(" Enter the Id for which you want the User data");
+		int id = sc.nextInt();
+		User u = service.selectUser(id);
+		System.out.println(u);
+		 System.out.println("Press 1 to go Back");
+	     System.out.println("Press another number to exit");
+	     int n = sc.nextInt();
+	     if(n==1) {
+	    	 crudOperation();
+	     }else {
+	    	 System.exit(1);
+	     }
+	     break;
+	     
+	case 3:
+		 user = new User();
+		System.out.print("Enter the User Name -->");
+		 name = sc.next();
+		System.out.print("Enter the User Age -->");
+		 age = sc.nextInt();
+		System.out.print("Enter the User Address -->");
+		addr = sc.next();
+		user.setName(name);
+		user.setAge(age);
+		user.setAddr(addr);
+	    res = service.updateUser(user);
+	     System.out.println(res);
+	     System.out.println("Press 1 to go Back");
+	     System.out.println("Press another number to exit");
+	     next = sc.nextInt();
+	     if(next==1) {
+	    	 crudOperation();
+	     }else {
+	    	 System.exit(1);
+	     }
+		break;
+	case 4:
+		System.out.println(" Enter the Id for which you want the User data");
+		 id = sc.nextInt();
+		 user = service.selectUser(id);
+		System.out.println(user);
+		 System.out.println("Press 1 to go Back");
+	     System.out.println("Press another number to exit");
+	     n = sc.nextInt();
+	     if(n==1) {
+	    	 crudOperation();
+	     }else {
+	    	 System.exit(1);
+	     }
+	     break;
+	   
+	case 5:
+		System.exit(1);
+	default:
+		System.out.println("Invalid Input try agin with valid key");
+		System.out.println("Press another number to exit");
+	    crudOperation();
+	     break;
+			}
+    }
+    }
+}

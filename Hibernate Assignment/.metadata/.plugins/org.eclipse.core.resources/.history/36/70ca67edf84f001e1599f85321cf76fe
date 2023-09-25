@@ -1,0 +1,94 @@
+package in.ineuron.repo;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
+
+import in.ineuron.model.Players;
+import in.ineuron.util.HibernateUtil;
+
+@Repository
+public class PlayerRepoImpl implements IPlayersRepo {
+ 
+	Session session;
+	Transaction transaction;
+	
+	@Override
+	public String savePlayer(Players player) {
+		
+    	boolean flag=false;
+    	Integer pno=null;
+		try {
+    	session=HibernateUtil.getSession();
+    	if(session!=null)
+    		transaction = session.beginTransaction();
+    	if(transaction!=null) {
+    	 pno = (Integer) session.save(player);
+    	}
+    	flag=true;
+		}catch (HibernateException he) {
+		  he.printStackTrace();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+//			if(flag)
+//				transaction.commit();
+//			else {
+//				transaction.rollback();
+//			}
+			HibernateUtil.closeSession(session);
+			HibernateUtil.closeSessionFactory();
+		}
+		return "Player Record is Saved with Id :: "+pno;
+	}
+
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Players findPlayerById(Integer id) {
+		Optional<Players> optional=null;
+		
+		try {
+			session=HibernateUtil.getSession();
+			if(session!=null) {
+				Query query = session.createQuery("From in.ineuron.model.Players where pno=:pno");
+				query.setParameter("pno", id);
+				optional =  query.uniqueResultOptional();
+			    
+			}
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return optional.get();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Players> findAllPlayers() {
+
+		List<Players> players=null;
+		try {
+			session=HibernateUtil.getSession();
+			if(session!=null) {
+				Query<Players> query = session.createQuery("From in.ineuron.model.Players ");
+			
+				players= query.list();
+			}
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return players;
+	}
+
+}

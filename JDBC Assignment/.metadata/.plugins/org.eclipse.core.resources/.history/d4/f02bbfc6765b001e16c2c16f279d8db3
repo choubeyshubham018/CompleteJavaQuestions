@@ -1,0 +1,55 @@
+package in.ineuron.dao;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import in.ineuron.util.JdbcUtil;
+
+public class InsertOperation {
+
+	private Connection connection;
+	private PreparedStatement pst;
+
+	public void insertOperation() {
+		connection = JdbcUtil.getConnection();
+		String insertQuery="insert into USER_RECORD(name,email,age) values(?,?,?)";
+		if(connection!=null) {
+			try {
+				pst = connection.prepareStatement(insertQuery);
+				if(pst!=null) {
+					try {
+						BufferedReader reader = new BufferedReader(new FileReader("data.txt"));
+						String line = reader.readLine();
+						while(line!=null) {
+							String[] data = line.split(",");
+							pst.setString(1,data[0]);
+							pst.setString(1,data[2]);
+							pst.setInt(3, Integer.parseInt(data[1]));
+				            
+							pst.addBatch();
+							line=reader.readLine();
+						}
+						reader.close();
+						pst.executeBatch();
+						pst.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	        public static void main(String[] args) {
+		     InsertOperation ins = new InsertOperation();
+		     ins.insertOperation();
+	        	
+	           }
+}

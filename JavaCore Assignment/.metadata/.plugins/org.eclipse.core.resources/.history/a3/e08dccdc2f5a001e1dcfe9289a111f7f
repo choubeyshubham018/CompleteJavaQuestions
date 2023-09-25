@@ -1,0 +1,28 @@
+package in.ineuron;
+
+import java.util.Queue;
+
+public class Consumer {
+
+	public Consumer(Queue<Integer>q) throws InterruptedException {
+      Thread.currentThread().setName("Consumer");
+      System.out.println(Thread.currentThread().getName());
+      int sum=0;
+      synchronized (q) {
+    	  if(q.isEmpty()) {
+    		  try {
+				q.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+    	  }else {
+    		  Thread.currentThread().sleep(1000);
+		for (Integer value : q) {
+			sum+=value;
+		}
+		System.out.println("The total sum is --> "+sum);
+	}
+      }
+	}
+
+}

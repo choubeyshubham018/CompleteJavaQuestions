@@ -1,0 +1,44 @@
+package in.ineuron.util;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import in.ineuron.model.Student;
+
+public class HibernateUtil {
+
+	private static SessionFactory sessionFactory;
+	
+	private static Session session;
+	
+	static {
+		sessionFactory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
+	    System.out.println("configuration started");
+	}
+	
+	private HibernateUtil() {
+		
+	}
+	
+	public static void loadOnStart() {
+		System.out.println("LOading");
+	}
+	public static Session getSession() {
+		if(sessionFactory!=null) {
+			session  = sessionFactory.openSession();
+		}
+		return session;
+	}
+	
+	public static void closeSession(Session session) {
+		if(session!=null)
+			session.clear();
+	}
+	
+	public static void closeSessionFactory() {
+		if(sessionFactory!=null) {
+			sessionFactory.close();
+		}
+	}
+}

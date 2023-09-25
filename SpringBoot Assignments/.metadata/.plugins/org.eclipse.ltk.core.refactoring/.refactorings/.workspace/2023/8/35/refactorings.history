@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Ques25-SpringRestManagingProduct&apos; to &apos;Ques26-SpringRestManagingProduct&apos;" description="Rename resource &apos;Ques25-SpringRestManagingProduct&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Ques25-SpringRestManagingProduct" name="Ques26-SpringRestManagingProduct" stamp="1693289064856" updateReferences="true"/>
+</session>

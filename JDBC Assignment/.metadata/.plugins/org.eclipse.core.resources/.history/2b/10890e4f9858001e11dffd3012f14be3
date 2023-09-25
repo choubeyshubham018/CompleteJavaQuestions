@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+<h1 style="text-align: center;color: blue;">User Detail Form</h1>
+<form action="/user" method="get">
+<table align="center">
+<tr>
+<th>User Name</th>
+<td><input type="text" name="name"/></td>
+<td></td><td><input type="submit" value="SUBMIT"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

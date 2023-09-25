@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Ques_16_SessionManagement">
+        <property name="context-root" value="Ques_16_SessionManagement"/>
+        <property name="java-output-path" value="/Ques_16_SessionManagement/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-ja.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-es.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/annotations-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-ha.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/el-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-ko.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/websocket-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jaspic-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-zh-CN.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/ecj-4.20.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-cs.jar"/>
+  <path value="D:/Software/jars/JSTL jars/taglibs-standard-impl-1.2.5.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/c-1_0-rt.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/c-1_1.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/c.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/fmt-1_0-rt.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/fmt.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/fn.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/permittedtaglibs.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/scriptfree.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/sql-1_0-rt.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/sql.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/x-1_0-rt.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-taglibs-standard-impl-1.2.5.jar/meta-inf/x.tld" project="Ques_17_ServletBlogApplication"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-de.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-storeconfig.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-ssi.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-ru.jar"/>
+  <path value="D:/Software/jars/hibernate-release-5.6.5.Final/hibernate-release-5.6.5.Final/lib/optional/hikaricp/HikariCP-3.2.0.jar"/>
+  <path value="D:/Software/jars/hibernate-release-5.6.5.Final/hibernate-release-5.6.5.Final/lib/optional/hikaricp/slf4j-api-1.7.25.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-coyote.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-websocket.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jasper-el.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jsp-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-jni.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-util-scan.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-ant.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-jdbc.jar"/>
+  <path value="D:/Software/jars/JSTL jars/taglibs-standard-spec-1.2.5.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-tribes.jar"/>
+  <path value="D:/Software/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jasper.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-pt-BR.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/servlet-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-fr.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-util.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-dbcp.jar"/>
+ </paths>
+ <validation>
+  <el>
+   <linked-el length="10" name="%0" offset="531" path="%1"/>
+   <linked-el length="12" name="%0" offset="579" path="%1"/>
+   <linked-el length="8" name="%0" offset="512" path="%1"/>
+   <linked-el length="16" name="%0" offset="552" path="%1"/>
+   <linked-el length="12" name="%2" offset="579" path="%1"/>
+   <linked-el length="10" name="%3" offset="531" path="%1"/>
+   <linked-el length="16" name="%4" offset="552" path="%1"/>
+   <linked-el length="8" name="%5" offset="512" path="%1"/>
+   <linked-el length="10" name="%6" offset="482" path="%1"/>
+   <linked-el length="9" name="%7" offset="389" path="%8"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="b" value="%0"/>
+  <alias path="b.content" value="%2"/>
+  <alias path="b.title" value="%3"/>
+  <alias path="b.description" value="%4"/>
+  <alias
+   path="/Ques_17_ServletBlogApplication/src/main/webapp/display.jsp" value="%8"/>
+  <alias
+   path="/Ques_17_ServletBlogApplication/src/main/webapp/blogDisplay.jsp" value="%1"/>
+  <alias path="b.bid" value="%5"/>
+  <alias path="blog" value="%6"/>
+  <alias path="status" value="%7"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsp/jstl/core">
+   <prefix>core</prefix>
+   <prefix>c</prefix>
+  </uri>
+ </uris>
+</kb-project>

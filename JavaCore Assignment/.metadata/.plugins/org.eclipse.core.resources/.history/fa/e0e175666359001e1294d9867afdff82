@@ -1,0 +1,25 @@
+package in.ineuron;
+
+public class BinarySearch {
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 4, 6, 7, 9, 11, 13, 14, 17, 24 };
+		int ans = binarySearch(arr, 1, 0, arr.length - 1);
+		System.out.println(ans);
+	}
+
+	public static int binarySearch(int[] arr, int target, int i, int j) {
+		if (i > j)
+			return -1;
+		int m = i + (j - i) / 2;
+		if (arr[m] == target)
+			return m;
+		else if (arr[m] < target) {
+			return binarySearch(arr, target, m + 1, j);
+		} else {
+			return binarySearch(arr, target, i, m - 1);
+		}
+
+	}
+
+}

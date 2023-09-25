@@ -1,0 +1,11 @@
+package in.ineuron.dao;
+
+import in.ineuron.dto.Blog;
+
+public interface IBlogDao {
+
+	public String saveBlog(Blog blog);
+	
+	
+	public Blog getBlog(Integer id);
+}

@@ -1,0 +1,61 @@
+package in.ineuron.dao;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import in.ineuron.util.JdbcUtil;
+
+public class InsertOperation {
+
+	private Connection connection;
+	private PreparedStatement pst;
+
+	public void insertOperation() {
+		connection = JdbcUtil.getConnection();
+		String insertQuery="insert into user_record(id,name,age,email) values(?,?,?,?)";
+		if(connection!=null) {
+			try {
+				pst = connection.prepareStatement(insertQuery);
+				if(pst!=null) {
+					connection.setAutoCommit(false);
+					
+					try {
+						BufferedReader reader = new BufferedReader(new FileReader("data.txt"));
+						String line = reader.readLine();
+						while(line!=null) {
+							String[] data = line.split(",");
+							System.out.println(data.length);
+							pst.setInt(1,Integer.parseInt(data[0]));
+							pst.setString(2,data[1]);
+							pst.setInt(3, Integer.parseInt(data[2]));
+							pst.setString(4,data[3]);
+				            
+							 pst.addBatch();
+							line=reader.readLine();
+						}
+						reader.close();
+						int[] batch = pst.executeBatch();
+						pst.close();
+						System.out.println(batch.length);
+						System.out.println("Record added Succesfully");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	        public static void main(String[] args) {
+		     InsertOperation ins = new InsertOperation();
+		     ins.insertOperation();
+	        	
+	           }
+}

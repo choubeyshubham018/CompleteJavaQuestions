@@ -1,0 +1,10 @@
+package in.ineuron.service;
+
+import in.ineuron.model.Players;
+
+public interface IServicePlayer {
+
+	public String updateRecord(Integer id);
+	
+	public Players fetchPlayer(Integer id);
+}

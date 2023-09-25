@@ -1,0 +1,28 @@
+package in.ineuron;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
+import in.ineuron.cfg.ApplicationConfig;
+import in.ineuron.model.Student;
+import in.ineuron.service.IStudentService;
+
+public class App 
+{
+	@Autowired
+	private static IStudentService service;
+    public static void main( String[] args )
+    {
+    //   ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+    //   IStudentService service = context.getBean(IStudentService.class);
+//       String res = service.addStudents(new Student("Sachin", "MI"));
+//       System.out.println(res);/
+      
+    	
+    	Student student = service.fetchStudent(2);
+         System.out.println(student);
+       
+    }
+}

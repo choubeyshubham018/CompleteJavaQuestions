@@ -1,0 +1,30 @@
+Key Points about COnstructor are:-
+
+*Constructor is a specialized setter whose name is same as the name of the class.
+
+*It does not have any explicit return type.
+
+*Constructor does not allow return statement it leads to CE.
+
+*Whenever we create an Object of a class in java then constructor of that class is called ,If
+ we have not defined any constructor then Compiler create a default constructor in that class in
+ Backend.
+
+ *Default Constructor is always a zero parameterised Constructor,It is only available if programmer
+ doesnot define any constructor inside a class.
+
+ *First line of a Constructor is always either super() or this().Only one is allowed inside a 
+ constructor.If we does not write any of them then compiler automatically assign super() in that 
+ constructor.
+
+ *super() is used to call the parent class Zero Parameterised Constructor while this() is used
+ to link the constructor of same class.
+
+*Constructor does not participate in Inheritance they are linked by super().
+
+*If we does not want to allow the creation of Object of a class then we have to specify the class 
+Constructor as 'private'. 
+
+*Calling One Constructor from Another Constructor of same class using this() is called Constructor 
+Chaining.
+ 

@@ -1,0 +1,7 @@
+package in.ineuron.model;
+
+public class Product {
+
+	private Integer empid;
+	
+}

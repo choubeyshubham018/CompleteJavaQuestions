@@ -1,0 +1,13 @@
+package in.ineuron.service;
+
+import in.ineuron.model.Product;
+
+public class ProductServiceImpl implements IProductServce {
+
+	@Override
+	public Product getProduct(Integer pid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

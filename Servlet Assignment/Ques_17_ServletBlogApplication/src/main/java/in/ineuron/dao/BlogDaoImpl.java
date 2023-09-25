@@ -1,0 +1,83 @@
+package in.ineuron.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import in.ineuron.dto.Blog;
+import in.ineuron.util.JdbcUtil;
+
+public class BlogDaoImpl implements IBlogDao {
+
+	private Connection connection;
+	private String sqlInsert="Insert into BLOG(bid,title,description,content) values(?,?,?,?)";
+	private String sqlSelectQuery="Select bid,title,description,content from blog";
+	private ResultSet resultSet;
+
+	@Override
+	public String saveBlog(Blog blog) {
+		connection = JdbcUtil.createConnection();
+		String res="";
+		if(connection!=null) {
+			try {
+				PreparedStatement pst = connection.prepareStatement(sqlInsert);
+			    if(pst!=null) {
+				pst.setInt(1, blog.getBid());
+				pst.setString(2, blog.getTitle());
+				pst.setString(3, blog.getDescription());
+				pst.setString(4, blog.getContent());
+			    int rowAff = pst.executeUpdate();
+			    if(rowAff > 0) {
+			    	res="Blog saved Successfully";
+			    }
+			    }
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return res;
+	}
+
+	@Override
+	public List<Blog> getBlog() {
+		
+		connection = JdbcUtil.createConnection();
+		List<Blog> blogs = new ArrayList<Blog>();
+		Blog blog =null;
+		if(connection!=null) {
+			try {
+				PreparedStatement pst = connection.prepareStatement(sqlSelectQuery);
+				if(pst!=null) {
+					resultSet=pst.executeQuery() ;
+					if(resultSet!=null) {
+					
+						while(resultSet.next()) {
+						blog=new Blog(); 
+						blog.setBid(resultSet.getInt(1));
+						 blog.setTitle(resultSet.getString(2));
+						 blog.setDescription(resultSet.getString(3));
+						 blog.setContent(resultSet.getString(4));
+						
+						 System.out.println(blog);
+						blogs.add(blog);
+						
+					}
+						System.out.println(blogs.size());
+						 blogs.forEach(System.out::println);
+					}
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return blogs;
+	}
+
+}

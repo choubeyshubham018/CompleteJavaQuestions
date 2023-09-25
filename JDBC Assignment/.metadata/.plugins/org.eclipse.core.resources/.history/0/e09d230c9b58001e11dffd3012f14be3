@@ -1,0 +1,8 @@
+package in.ineuron;
+
+import in.ineuron.model.Product;
+
+public interface IEmployeeDao {
+
+	public Product getProduct(Integer pid);
+}

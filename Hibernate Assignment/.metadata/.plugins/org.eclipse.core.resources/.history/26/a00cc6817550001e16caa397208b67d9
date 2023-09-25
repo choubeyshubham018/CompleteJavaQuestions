@@ -1,0 +1,19 @@
+package in.ineuron.repo;
+
+import in.ineuron.model.Players;
+
+public class PlayerRepoImpl implements IPlayerRepo {
+
+	@Override
+	public String updateRecord(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Players fetchPlayerById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

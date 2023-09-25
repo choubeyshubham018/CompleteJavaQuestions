@@ -1,0 +1,13 @@
+package in.ineuron.dao;
+
+import in.ineuron.model.Product;
+
+public class ProductDaoImpl implements IProductDao {
+
+	@Override
+	public Product getProduct(Integer pid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,68 @@
+package in.ineuron.repo;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import in.ineuron.model.Players;
+import in.ineuron.util.HibernateUtil;
+
+public class PlayerRepoImpl implements IPlayerRepo {
+
+	private Session session;
+	private Transaction transaction;
+	private Players player;
+
+	@Override
+	public String updateRecord(Integer id,String name,String team) {
+		boolean flag=false;
+		try {
+			session = HibernateUtil.getSession();
+			if(session!=null) {
+				transaction = session.beginTransaction();
+				if(transaction!=null) {
+				 player = session.get(Players.class, id);
+				 System.out.println("Record Before Update");
+				 player.setName(name);
+				 player.setTeam(team);
+				 flag=true;
+				}
+			}
+		}catch (HibernateException he) {
+		   he.printStackTrace();
+		} catch (Exception e) {
+		   e.printStackTrace();
+		}finally {
+			if(flag) {
+				transaction.commit();
+			}
+			else {
+				transaction.rollback();
+			}
+			HibernateUtil.closeSession(session);
+			HibernateUtil.closeSessionFactory();
+		}
+		return "Record is Updated for ID :: "+player.getPno();
+	}
+
+	@Override
+	public Players fetchPlayerById(Integer id) {
+		try {
+			session=HibernateUtil.getSession();
+			if(session!=null) {
+				player=session.get(Players.class, id);
+			}
+			
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			HibernateUtil.closeSession(session);
+			HibernateUtil.closeSessionFactory();
+		}
+		
+		return null;
+	}
+
+}

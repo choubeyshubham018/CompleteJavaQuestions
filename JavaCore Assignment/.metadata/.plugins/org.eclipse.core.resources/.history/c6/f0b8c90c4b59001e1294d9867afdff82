@@ -1,0 +1,9 @@
+package in.ineuron;
+
+public interface UserInterface {
+	
+	void displayNum(int num);
+	
+	void wishWelcome(String name);
+
+}

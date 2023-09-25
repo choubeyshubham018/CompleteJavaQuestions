@@ -1,0 +1,43 @@
+package in.ineuron;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamMethodApplication {
+
+	public static void main(String[] args) {
+		List<Integer> numList = List.of(10, 21, 9, 18, 7, 5, 1, 25, 31, 29);
+		
+		//Apply Stream Filter method on numList
+		numList.stream().filter(i->i>10).forEach(i->System.out.print(i+" -> "));
+		
+		System.out.println();
+		
+		//Sorting the numList using streamApi
+		numList.stream().sorted().forEach(i->System.out.print(i+" -> "));
+		
+		System.out.println();
+		
+		//Sorting the elements of numList in reverse Order
+		numList.stream().sorted((i1,i2)->i2.compareTo(i1)).forEach(i->System.out.print(i+" -> "));
+	
+		System.out.println();
+		
+		//Counting the Number of elements in the List
+		
+		Long count=numList.stream().count();
+		System.out.println(count);
+		
+		
+		//Creating a new List whose elements are twice the elements value of numList
+		List<Integer> doubleList=numList.stream().map(i->i*2).collect(Collectors.toList());
+		System.out.println(doubleList);
+		
+		//Collection all the elements of the List to a array
+		Integer[]arr=(Integer[]) numList.stream().toArray();
+		System.out.println(arr);
+	
+	
+	}
+}

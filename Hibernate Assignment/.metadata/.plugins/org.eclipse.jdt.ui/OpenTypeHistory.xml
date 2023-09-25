@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Ques_18_HibernateApplication/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.service{IStudentService.java[IStudentService" modifiers="513" timestamp="1694154413744"/>
+    <typeInfo handle="=Ques_18_HibernateApplication/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.repo{IStudentDao.java[IStudentDao" modifiers="513" timestamp="1694154440613"/>
+    <typeInfo handle="=Ques_19_HibernateInsertRetriveApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.repo{IPlayersRepo.java[IPlayersRepo" modifiers="513" timestamp="1694359173512"/>
+    <typeInfo handle="=Ques_19_HibernateInsertRetriveApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.service{IPlayerService.java[IPlayerService" modifiers="513" timestamp="1694359345672"/>
+    <typeInfo handle="=Ques_20_HibernateUpdateApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.repo{IPlayerRepo.java[IPlayerRepo" modifiers="513" timestamp="1694417593800"/>
+</typeInfoHistroy>

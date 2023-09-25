@@ -1,0 +1,66 @@
+package in.ineuron.repo;
+
+
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
+
+import in.ineuron.model.Student;
+import in.ineuron.util.HibernateUtil;
+
+
+@Repository
+public class StudentDaoImpl implements IStudentDao {
+
+	private Transaction transaction;
+	private Session session;
+
+	@Override
+	public String saveStudents(Student student) {
+		String res="";
+		Student students=null;
+	    Boolean status=false;
+	try {
+		session = HibernateUtil.getSession();
+	
+		if(session!=null)
+		transaction=session.beginTransaction();
+		
+		if(transaction!=null) {
+			 students = (Student) session.save(student);
+		}
+		res="Record is saved by Id :: "+students.getSid() ;
+       status=true;
+	}catch (HibernateException he) {
+		he.printStackTrace();
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		if(status) {
+			transaction.commit();
+		}else {
+			transaction.rollback();
+		}
+		HibernateUtil.closeSession(session);
+		HibernateUtil.closeSessionFactory();
+	}
+	return res;
+	}
+	@Override
+	public Student fetchStudentById(Integer id) {
+		Session session = HibernateUtil.getSession();
+		Student student = session.get(Student.class, id);
+		return student;
+	}
+
+	@Override
+	public List<Student> fetchAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.SelectOperation"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.IUserDao"/>
+    <fullyQualifiedTypeName name="in.ineuron.daofactory.UserDaoFactory"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.UserServiceImpl"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.IUserService"/>
+    <fullyQualifiedTypeName name="in.ineuron.servicefactory.UserServiceFactory"/>
+    <fullyQualifiedTypeName name="in.ineuron.model.User"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="in.ineuron.util.JdbcUtil"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.ProductDaoImpl"/>
+    <fullyQualifiedTypeName name="in.ineuron.model.Product"/>
+    <fullyQualifiedTypeName name="in.ineuron.dao.IProductDao"/>
+    <fullyQualifiedTypeName name="in.ineuron.daofactory.ProductDaoFactory"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.IProductServce"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.ProductServiceImpl"/>
+    <fullyQualifiedTypeName name="in.ineuron.service.IProductService"/>
+    <fullyQualifiedTypeName name="in.ineuron.servicefactory.ProductServiceFactory"/>
+</qualifiedTypeNameHistroy>

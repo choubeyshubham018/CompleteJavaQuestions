@@ -1,0 +1,30 @@
+package in.ineuron.repo;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import in.ineuron.model.Student;
+
+@Repository
+public class StudentDaoImpl implements IStudentDao {
+
+	@Override
+	public String saveStudents(List<Student> students) {
+		
+		return null;
+	}
+
+	@Override
+	public Student fetchStudentById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> fetchAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

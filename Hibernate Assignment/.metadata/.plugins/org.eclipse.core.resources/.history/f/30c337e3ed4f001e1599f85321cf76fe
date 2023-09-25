@@ -1,0 +1,33 @@
+package in.ineuron.service;
+
+import java.util.List;
+
+import in.ineuron.model.Players;
+
+public class PlayerServiceImpl implements IPlayerService {
+
+	@Override
+	public String savePlayer(Players player) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String savePlayers(List<Players> players) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Players fetchPlayer(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Players> fetchAllPlayer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

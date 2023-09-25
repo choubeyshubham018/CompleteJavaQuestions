@@ -1,0 +1,18 @@
+package in.ineuron;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import in.ineuron.config.AppConfig;
+import in.ineuron.service.IServicePlayer;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+       ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+       
+       IServicePlayer service = context.getBean(IServicePlayer.class);
+       System.out.println(service.fetchPlayer(2));
+    }
+}

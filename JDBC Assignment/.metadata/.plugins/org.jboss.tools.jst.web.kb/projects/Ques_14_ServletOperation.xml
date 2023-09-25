@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-ja.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-es.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/annotations-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-ha.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/el-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-ko.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/websocket-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jaspic-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-zh-CN.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/ecj-4.20.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-cs.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-de.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-storeconfig.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-ssi.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-ru.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-coyote.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-websocket.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jasper-el.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jsp-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-jni.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-util-scan.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-ant.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-jdbc.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/catalina-tribes.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/jasper.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-pt-BR.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/servlet-api.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-i18n-fr.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-util.jar"/>
+  <path value="D:/Software/jars/Tomcat/apache-tomcat-9.0.71/lib/tomcat-dbcp.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jboss.cdi.core"/>
+  <el>
+   <linked-el length="7" name="%0" offset="268" path="%1"/>
+   <linked-el length="7" name="%2" offset="268" path="%3"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias
+   path="/Ques_14_ServletOperation/src/main/webapp/WEB-INF/display.jsp" value="%3"/>
+  <alias path="name" value="%0"/>
+  <alias path="/Ques_14_ServletOperation/src/main/webapp/display.jsp" value="%1"/>
+  <alias path="user" value="%2"/>
+ </aliases>
+ <includes/>
+ <uris/>
+</kb-project>

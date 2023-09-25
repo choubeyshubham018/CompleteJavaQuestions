@@ -1,0 +1,33 @@
+package in.ineuron.repo;
+
+import java.util.List;
+
+import in.ineuron.model.Players;
+
+public class PlayerRepoImpl implements IPlayersRepo {
+
+	@Override
+	public String savePlayer(Players player) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String saveMultiplePlayer(List<Players> players) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Players findPlayerById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Players> findAllPlayers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

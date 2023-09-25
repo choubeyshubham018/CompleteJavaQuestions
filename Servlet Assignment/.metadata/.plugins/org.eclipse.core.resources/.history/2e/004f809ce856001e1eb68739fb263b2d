@@ -1,0 +1,25 @@
+package in.ineuron.service;
+
+import in.ineuron.dao.IBlogDao;
+import in.ineuron.daofactory.BlogDaoFactory;
+import in.ineuron.dto.Blog;
+import in.ineuron.servicefactory.BlogServiceFactory;
+
+public class BlogServiceImpl implements IBlogService {
+
+	private IBlogDao dao;
+	public BlogServiceImpl() {
+		dao=BlogDaoFactory.getDao();
+	}
+	@Override
+	public String saveBlog(Blog blog) {
+      
+		return dao.saveBlog(blog);
+	}
+
+	@Override
+	public Blog getBlog(Integer bid) {
+		return dao.getBlog(bid);
+	}
+
+}

@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 style="text-align: center;color: blue;">Blog List</h2>
+<table border="1px" align="center">
+<tr>
+<th>ID</th>
+<th>TITLE</th>
+<th>DISCRIPTION</th>
+<th>CONTENT</th>
+</tr>
+<c:forEach items="${blog}" var="b">
+<tr>
+<td>${b.bid}</td>
+<td>${b.title}</td>
+<td>${b.description}</td>
+<td>${b.content}</td>
+</tr>
+
+</c:forEach>
+
+</table>
+<div style="display: flex;align-items: center; justify-content: center;"><a href="index.jsp" style="text-decoration: none; border: 1px solid; background-color: yellow;">Home</a>
+</div>
+
+</body>
+</html>
